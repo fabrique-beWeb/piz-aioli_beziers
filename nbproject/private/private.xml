@@ -5,10 +5,15 @@
         <group>
             <file>file:/var/www/html/pizzaioli/module/Pizza/src/Pizza/Model/Listepizza.php</file>
             <file>file:/var/www/html/pizzaioli/module/Pizza/view/pizza/index/index.phtml</file>
+            <file>file:/var/www/html/pizzaioli/module/Pizza/view/layout/layout.phtml</file>
+            <file>file:/var/www/html/pizzaioli/config/autoload/global.php</file>
             <file>file:/var/www/html/pizzaioli/module/Pizza/src/Pizza/Controller/IndexController.php</file>
+            <file>file:/var/www/html/pizzaioli/composer.json</file>
             <file>file:/var/www/html/pizzaioli/module/Pizza/src/Pizza/Model/ListepizzaTable.php</file>
+            <file>file:/var/www/html/pizzaioli/public/index.php</file>
             <file>file:/var/www/html/pizzaioli/module/Pizza/Module.php</file>
             <file>file:/var/www/html/pizzaioli/module/Pizza/config/module.config.php</file>
+            <file>file:/var/www/html/pizzaioli/config/application.config.php</file>
         </group>
     </open-files>
 </project-private>

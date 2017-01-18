@@ -1,0 +1,34 @@
+ <table class="table">
+ <tr>
+     <th>Id</th>
+     <th>Nom</th>
+     <th>Ingrédient 1</th>
+     <th>Ingrédient 2</th>
+     <th>Ingrédient 3</th>
+     <th>Ingrédient 4</th>
+     <th>Ingrédient 5</th>
+     <th>Ingrédient 6</th>
+     <th>Prix</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php print_r($listepizza_page); foreach ($listepizza_page as $key=>$pizza) :
+$i=$key+1;
+$var = $pizza->id[$i];
+        echo "suivant : $var\n";
+     echo gettype($pizza), "\n";
+     ?>
+
+ <tr>
+     <td><?php echo $this->escapeHtml($pizza->id);?></td>
+     <td><?php echo $this->escapeHtml($pizza->nom);?></td>
+     <td><?php echo $this->escapeHtml($pizza->ingredient_1);?></td>
+     <td><?php echo $this->escapeHtml($pizza->ingredient_2);?></td>
+     <td><?php echo $this->escapeHtml($pizza->ingredient_3);?></td>
+     <td><?php echo $this->escapeHtml($pizza->ingredient_4);?></td>
+     <td><?php echo $this->escapeHtml($pizza->ingredient_5);?></td>
+     <td><?php echo $this->escapeHtml($pizza->ingredient_6);?></td>
+     <td><?php echo $this->escapeHtml($pizza->prix);?></td>
+     <td><img src="/img/img_pizzas/<?php echo $this->escapeHtml($pizza->url_img); ?>" alt="<?php echo $this->escapeHtml($pizza->nom);?>" width="250"></td>
+ </tr> <?php
+  endforeach; ?>
+ </table>
