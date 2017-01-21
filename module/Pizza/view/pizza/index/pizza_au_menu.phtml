@@ -5,11 +5,13 @@
      <th>Url</th>
      <th>&nbsp;</th>
  </tr>
- <?php $publicDir = getcwd() . './img/img_pizzas/'; foreach ($listepizza_page as $pizza) : ?>
+ <?php foreach ($listepizza_page as $pizza) : ?>
  <tr>
      <td><?php echo $this->escapeHtml($pizza->getId());?></td>
      <td><?php echo $this->escapeHtml($pizza->getNom());?></td>
      <td><img src="/img/img_pizzas/<?php echo $this->escapeHtml($pizza->getUrl_img()); ?>" alt="<?php echo $this->escapeHtml($pizza->getNom());?>" width="250"></td>
  </tr>
- <?php endforeach; ?>
+ <?php $objet = $pizza -> getBase();
+print_r($objet -> getNom());
+ endforeach; ?>
  </table>

@@ -30,17 +30,16 @@ return array(
                     'route'    => '/test',
                     'defaults' => array(
                         'controller' => 'Pizza\Controller\Index',
-                        'action'     => 'test',
+                        'action'     => 'add',
                     ),
                 ),
             ),
         ),
     ),
-
     'controllers' => array(
-        'invokables' => array(
-            'Pizza\Controller\Index' => 'Pizza\Controller\IndexController'
-        ),
+        'factories' => array(
+                 'Pizza\Controller\Index' => 'Pizza\Factory\PizzaControllerFactory'
+               ),
     ),
     'view_manager' => array(
         'display_not_found_reason' => true,
@@ -52,6 +51,7 @@ return array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'pizza/index/index' => __DIR__ . '/../view/pizza/index/index.phtml',
             'pizza/index/test' => __DIR__ . '/../view/pizza/index/test.phtml',
+            'pizza/index/add' => __DIR__ . '/../view/pizza/index/test.phtml',
             'pizza/index/cartepizzas' => __DIR__ . '/../view/pizza/index/pizza_au_menu.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml'
