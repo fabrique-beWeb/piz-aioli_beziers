@@ -1,43 +1,51 @@
 <?php
 
 namespace Pizza\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /** @ORM\Table(name="tb_pizza_patron") 
  * @ORM\Entity(repositoryClass="Pizza\Repository\Repository") */
+class TbPizzaPatron {
 
-class TbPizzaPatron
-{  
     /**
-    * @ORM\Id
-    * @ORM\GeneratedValue(strategy="AUTO")
-    * @ORM\Column(type="integer", length=11)
-    */
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer", length=11)
+     */
     protected $id;
 
     /** @ORM\Column(type="string", length=255) */
     protected $nom;
-    
+
     /**
-     * @var integer
-     * @ORM\ManyToOne(targetEntity="TbBases")
+     * @ORM\ManyToOne(targetEntity="TbBases", cascade={"persist"})
      * @ORM\JoinColumn(name="base", referencedColumnName="id")
      */
     protected $base;
-    
+
+    /**
+     * @ORM\ManyToMany(targetEntity="TbIngredients")
+     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     */
+    protected $ingredients;
+
     /** @ORM\Column(type="boolean", length=1) */
     protected $pizofday;
-    
+
     /** @ORM\Column(type="boolean", length=1) */
     protected $pizza_au_menu;
-    
+
     /** @ORM\Column(type="float") */
     protected $prix;
-    
+
     /** @ORM\Column(type="string", length=255) */
     protected $url_img;
-    
+
+    public function getIngredients() {
+        return $this->ingredients;
+    }
+
     function getId() {
         return $this->id;
     }
@@ -78,6 +86,10 @@ class TbPizzaPatron
         $this->base = $base;
     }
 
+    function setIngredients($tabIngredients) {
+        $this->ingredients = $tabIngredients;
+    }
+
     function setPizofday($pizofday) {
         $this->pizofday = $pizofday;
     }
@@ -93,7 +105,5 @@ class TbPizzaPatron
     function setUrl_img($url_img) {
         $this->url_img = $url_img;
     }
-    
-     
-}
 
+}

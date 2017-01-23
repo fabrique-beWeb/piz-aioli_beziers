@@ -10,18 +10,17 @@ if ($this->nom) :
         <p>Nom de la pizza : <?php echo $this->nom; ?></p>
     </div>
     <?php
-endif; ?>
+endif;
 
-<?php echo $this->form()->openTag($form) ?>
-    <?php if ($form->has('nom')) : ?>
-        <?php echo $this->formLabel($form->get('nom')) ?>
-        <?php echo $this->formInput($form->get('nom')) ?>
-        <?php echo $this->formElementErrors($form->get('nom')) ?>
-    <?php endif; ?>
-    <?php echo $this->formLabel($form->get('base')) ?>
-<?php
-        echo $this->formSelect($form->get('base'));
-        echo $this->formElementErrors($form->get('base'));
-    ?>
-    <?php echo $this->formSubmit($form->get('submit')) ?>
-<?php echo $this->form()->closeTag() ?>
+echo $this->form()->openTag($form);
+if ($form->has('nom')) :
+echo $this->formLabel($form->get('nom'));
+echo $this->formInput($form->get('nom'));
+echo $this->formElementErrors($form->get('nom'));
+endif;
+echo $this->formLabel($form->get('base'));
+echo $this->formSelect($form->get('base'));
+echo $this->formElementErrors($form->get('base'));
+echo $this->formMultiCheckbox($form->get('ingredients'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
