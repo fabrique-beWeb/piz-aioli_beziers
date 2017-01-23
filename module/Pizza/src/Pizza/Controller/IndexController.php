@@ -16,30 +16,6 @@ class IndexController extends AbstractActionController {
         $this->service = $service->getService();
     }
 
-    public function addAction() {
-        $viewData = array();
-
-        $form = new FormAddPizza($this->service);
-
-        if ($this->getRequest()->isPost()) {
-            $newpizza = new \Pizza\Entity\TbPizzaPatron();
-            $dataForm = $this->getRequest()->getPost();
-            
-            foreach($dataForm['ingredients'] as $ingredientId){
-                $ingredients[] = $this->service->getRepository('\Pizza\Entity\TbIngredients')->find($ingredientId);
-            }
-            $base = $this->service->getRepository('\Pizza\Entity\TbBases')->find($dataForm['base']);
-            $newpizza->setIngredients($ingredients);
-            $newpizza->setBase($base);
-            $newpizza->setNom($dataForm['nom']);
-
-            $this->service->persist($newpizza);
-            $this->service->flush();
-        }
-        $viewData['form'] = $form;
-        return new ViewModel($viewData);
-    }
-
     public function pizofdayAction() {
 
         return new ViewModel(array(

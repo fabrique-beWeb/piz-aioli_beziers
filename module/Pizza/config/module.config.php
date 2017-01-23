@@ -1,4 +1,5 @@
 <?php
+
 namespace Pizza;
 
 return array(
@@ -7,30 +8,40 @@ return array(
             'index' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/',
+                    'route' => '/',
                     'defaults' => array(
                         'controller' => 'Pizza\Controller\Index',
-                        'action'     => 'pizofday',
+                        'action' => 'pizofday',
                     ),
                 ),
             ),
             'cartepizzas' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/cartepizzas',
+                    'route' => '/cartepizzas',
                     'defaults' => array(
                         'controller' => 'Pizza\Controller\Index',
-                        'action'     => 'cartepizzas',
+                        'action' => 'cartepizzas',
                     ),
                 ),
             ),
-            'test' => array(
+            'adminpizza' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/test',
+                    'route' => '/adminpizza',
                     'defaults' => array(
-                        'controller' => 'Pizza\Controller\Index',
-                        'action'     => 'add',
+                        'controller' => 'Pizza\Controller\Adminpizza',
+                        'action' => 'add',
+                    ),
+                ),
+            ),
+            'admincommandes' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route' => '/admincommandes',
+                    'defaults' => array(
+                        'controller' => 'Pizza\Controller\Admincommandes',
+                        'action' => 'add',
                     ),
                 ),
             ),
@@ -38,23 +49,25 @@ return array(
     ),
     'controllers' => array(
         'factories' => array(
-                 'Pizza\Controller\Index' => 'Pizza\Factory\PizzaControllerFactory'
-               ),
+            'Pizza\Controller\Index' => 'Pizza\Factory\IndexControllerFactory',
+            'Pizza\Controller\Adminpizza' => 'Pizza\Factory\AdminpizzaControllerFactory',
+            'Pizza\Controller\Admincommandes' => 'Pizza\Factory\AdmincommandesControllerFactory'
+        ),
     ),
     'view_manager' => array(
         'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
+        'display_exceptions' => true,
+        'doctype' => 'HTML5',
+        'not_found_template' => 'error/404',
+        'exception_template' => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'pizza/index/index' => __DIR__ . '/../view/pizza/index/index.phtml',
-            'pizza/index/test' => __DIR__ . '/../view/pizza/index/test.phtml',
-            'pizza/index/add' => __DIR__ . '/../view/pizza/index/test.phtml',
             'pizza/index/cartepizzas' => __DIR__ . '/../view/pizza/index/pizza_au_menu.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml'
+            'pizza/adminpizza/add' => __DIR__ . '/../view/pizza/index/adminpizza.phtml',
+            'pizza/admincommandes/add' => __DIR__ . '/../view/pizza/index/admincommandes.phtml',
+            'error/404' => __DIR__ . '/../view/error/404.phtml',
+            'error/index' => __DIR__ . '/../view/error/index.phtml'
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
@@ -70,9 +83,14 @@ return array(
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver',
+//                    'Pizza\Entity' => 'zfcuser_entity',
                 )
             )
         )
     ),
+//    'zfcuser' => array(
+//    'user_entity_class'       => 'Pizza\Entity\TbUsers',
+//    'enable_default_entities' => false,
+//),
 );

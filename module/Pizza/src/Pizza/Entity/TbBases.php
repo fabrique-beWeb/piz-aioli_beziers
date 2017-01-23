@@ -3,7 +3,6 @@
 namespace Pizza\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
-
 /** @ORM\Table(name="tb_bases") 
  * @ORM\Entity(repositoryClass="Pizza\Repository\Repository") */
 
