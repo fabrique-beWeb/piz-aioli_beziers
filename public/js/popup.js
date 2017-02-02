@@ -1,10 +1,10 @@
 function popup(id) {
 
-    $('#popup').fadeToggle();
+    $('#popup').fadeIn();
     var close = $('.close');
     close.click(function (event)
     {
-        $('#popup').fadeToggle();
+        $('#popup').fadeOut();
     });
 
     $('#lienadd').click(function () {
@@ -24,7 +24,7 @@ cartnb=result.responseJSON.cartnb;
 $('.cart').append(cartnb);
 
 }    });
-    $('#popup').fadeToggle();
+    $('#popup').fadeOut();
     }
     
 //Vider + contenu panier en popup
@@ -32,7 +32,7 @@ $('.cart').append(cartnb);
     
 function mycart() {
 
-    $('#mycart').fadeToggle();
+    $('#mycart').fadeIn();
 
 
     $.ajax({
@@ -49,7 +49,7 @@ $('#listcart').append(listcart);
         var closecart = $('.closecart');
     closecart.click(function (event)
     {
-        $('#mycart').fadeToggle();
+        $('#mycart').fadeOut();
     });
     
 }
@@ -68,5 +68,5 @@ $('.cart').append(cartnb);
 }
     });
 
-    $('#mycart').fadeToggle();
+    $('#mycart').fadeOut();
     }
