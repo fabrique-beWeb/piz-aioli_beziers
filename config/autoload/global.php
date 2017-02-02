@@ -12,10 +12,6 @@
  */
 
 return array(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
     'db' => array(
         'driver' => 'Pdo',
         'dsn'            => 'mysql:dbname=pizzaioli;hostname=localhost',
@@ -31,9 +27,3 @@ return array(
         ),
     ),
 );
-<<<<<<< HEAD
-=======
-);
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df

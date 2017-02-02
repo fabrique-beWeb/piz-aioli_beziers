@@ -2,8 +2,6 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
-<<<<<<< HEAD
-<<<<<<< HEAD
         'ZendDeveloperTools',        
         'DoctrineModule',
         'DoctrineORMModule',
@@ -12,27 +10,6 @@ return array(
         'Admin',
         'Pizza'
         
-=======
-        'ZendDeveloperTools',
-        'ZfcAdmin',
-        'Pizza',
-        'Admin',
-        'DoctrineModule',
-        'DoctrineORMModule',
-        'ZfcBase',
-        'ZfcUser',
-        'ZfcUserDoctrineORM'
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
-        'ZendDeveloperTools',        
-        'DoctrineModule',
-        'DoctrineORMModule',
-        'ZfcAdmin',
-        'MyAcl',
-        'Admin',
-        'Pizza'
-        
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
     ),
 
     // These are various options for the listeners attached to the ModuleManager

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
 <div class="container">
     
 <div id="article">
@@ -40,27 +36,4 @@
  <?php $base2 = $this->escapeHtml($pizza->getBase()->getId()); endforeach; ?>   
     
 
-<<<<<<< HEAD
-</div></div></div> <?php print_r($_SESSION['panier']['pizza']); ?>
-=======
- <table class="table">
- <tr>
-     <th>Id</th>
-     <th>Nom</th>
-     <th>Url</th>
-     <th>&nbsp;</th>
- </tr>
- <?php foreach ($listepizza_page as $pizza) : ?>
- <tr>
-     <td><?php echo $this->escapeHtml($pizza->getId());?></td>
-     <td><?php echo $this->escapeHtml($pizza->getNom());?></td>
-     <td><img src="/img/img_pizzas/<?php echo $this->escapeHtml($pizza->getUrl_img()); ?>" alt="<?php echo $this->escapeHtml($pizza->getNom());?>" width="250"></td>
- </tr>
- <?php $objet = $pizza -> getBase();
-print_r($objet -> getNom());
- endforeach; ?>
- </table>
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
 </div></div></div>
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df

@@ -7,36 +7,66 @@ function popup(id) {
         $('#popup').fadeToggle();
     });
 
-
-    $('a.lienadd').click(function (event) {
-        event.preventDefault();
-    });
-
-    $('a.lienadd').click(function () {
+    $('#lienadd').click(function () {
         addtocart(id);
     });
 
 }
 
 function addtocart(id) {
-<<<<<<< HEAD
-
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
     $.ajax({
         url: "/addtocart/" + id,
         dataType: 'json',
   complete : function(result){
 
 cartnb=result.responseJSON.cartnb;
-$('.cart').html("");
+    $('.cart').html("");
 $('.cart').append(cartnb);
+
+}    });
     $('#popup').fadeToggle();
+    }
+    
+//Vider + contenu panier en popup
+    
+    
+function mycart() {
+
+    $('#mycart').fadeToggle();
+
+
+    $.ajax({
+        url: "/listcart",
+        dataType: 'json',
+  complete : function(listcart){
+listcart=listcart.responseJSON.listcart;
+    $('#listcart').html("");
+$('#listcart').append(listcart);
+
+}
+    });
+    
+        var closecart = $('.closecart');
+    closecart.click(function (event)
+    {
+        $('#mycart').fadeToggle();
+    });
+    
 }
 
-<<<<<<< HEAD
+function emptycart() {
+
+    $.ajax({
+        url: "/emptycart",
+        dataType: 'json',
+  complete : function(emptycart){
+
+cartnb=emptycart.responseJSON.cartnb;
+    $('.cart').html("");
+$('.cart').append(cartnb);
+
+}
     });
-=======
-    })
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
+
+    $('#mycart').fadeToggle();
     }

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
 <?php
 
 namespace Pizza\Entity;
@@ -62,19 +58,4 @@ class TbUsers
 
 
 
-<<<<<<< HEAD
 }
-=======
-<!--CREATE TABLE user
-(
-    user_id       INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    username      VARCHAR(255) DEFAULT NULL UNIQUE,
-    email         VARCHAR(255) DEFAULT NULL UNIQUE,
-    display_name  VARCHAR(50) DEFAULT NULL,
-    password      VARCHAR(128) NOT NULL,
-    state         SMALLINT
-) ENGINE=InnoDB;-->
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
-}
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df

@@ -11,13 +11,6 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "~2.5.1",
         "doctrine/doctrine-orm-module": "~1.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	"zf-commons/zfc-user-doctrine-orm": "dev-master",
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
         "zf-commons/zfc-admin": "dev-master"
     },
     "require-dev": {

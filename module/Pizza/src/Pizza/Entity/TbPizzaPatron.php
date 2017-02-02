@@ -7,10 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 /** @ORM\Table(name="tb_pizza_patron") 
  * @ORM\Entity(repositoryClass="Pizza\Repository\Repository") */
 class TbPizzaPatron {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
    
     /**
      * @ORM\ManyToMany(targetEntity="TbIngredients")
@@ -23,12 +19,6 @@ class TbPizzaPatron {
         $this->ingredients = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
-<<<<<<< HEAD
-=======
-
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -45,19 +35,7 @@ class TbPizzaPatron {
      */
     protected $base;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     
-=======
-    /**
-     * @ORM\ManyToMany(targetEntity="TbIngredients")
-     * @ORM\JoinColumn(name="id", referencedColumnName="id")
-     */
-    protected $ingredients;
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
-    
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
 
     /** @ORM\Column(type="boolean", length=1) */
     protected $pizofday;
@@ -70,10 +48,6 @@ class TbPizzaPatron {
 
     /** @ORM\Column(type="string", length=255) */
     protected $url_img;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
     
     public function addIngredient(TbIngredients $ingredient)
   {
@@ -94,15 +68,6 @@ class TbPizzaPatron {
   {
     return $this->ingredients;
   }
-<<<<<<< HEAD
-=======
-
-    public function getIngredients() {
-        return $this->ingredients;
-    }
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
 
     function getId() {
         return $this->id;

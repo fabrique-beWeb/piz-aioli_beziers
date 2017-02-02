@@ -10,16 +10,8 @@ class FormAddPizza extends Form {
     public function __construct($objectManager) {
 
         parent::__construct("FormAddPizza");
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->setAttribute('method', 'post');
         $this->setAttribute('enctype','multipart/form-data');
-=======
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
-        $this->setAttribute('method', 'post');
-        $this->setAttribute('enctype','multipart/form-data');
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
 
         $this->add(array(
             'name' => 'nom',
@@ -49,10 +41,6 @@ class FormAddPizza extends Form {
                 'label' => 'Please Select Your Availablity',
                 'object_manager' => $objectManager,
                 'target_class' => 'Pizza\Entity\TbIngredients',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
                 'property' => 'nom'
             ),
         ));
@@ -74,7 +62,6 @@ class FormAddPizza extends Form {
                 'label' => 'Pizza à la carte',
                 'checked_value' => 1,
                 'unchecked_value' => '0'
-<<<<<<< HEAD
             ),
         ));
          
@@ -101,40 +88,6 @@ class FormAddPizza extends Form {
 
 
 
-=======
-                'property' => 'nom',
-                'empty_option' => '--- please choose ---'
-            ),
-        ));
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
-=======
-            ),
-        ));
-         
-         $this->add(array(
-            'name' => 'prix',
-            'attributes' => array(
-                'id' => 'prix'
-            ),
-            'options' => array(
-                'label' => 'prix'
-            ),
-        ));
-
-
-        $this->add(array(
-            'name' => 'fileupload',
-            'attributes' => array(
-                'type'  => 'file',
-            ),
-            'options' => array(
-                'label' => 'Photo d\'illustration',
-            ),
-        )); 
-
-
-
->>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
 
         $this->add(array(
             'name' => 'submit',
