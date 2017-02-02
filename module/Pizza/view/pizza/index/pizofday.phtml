@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df
+
+<div id="pizofday" class="row">
+<div class="colonne col-lg-6">
+  <?php foreach ($listepizza_page as $pizza) : ?>
+  <p><img src="/img/img_pizzas/<?php echo $this->escapeHtml($pizza->getUrl_img()); ?>" alt="<?php echo $this->escapeHtml($pizza->getNom());?>"></p>
+
+  <p><a class="btn btn-success popup-button" href="#" onclick="popup(<?php echo $this->escapeHtml($pizza->getId());?>)" role="button">Commander</a></p>
+    </div>
+<div class="colonne col-lg-6">
+  <h1>Pizza du jour : <?php echo $this->escapeHtml($pizza->getNom());?></h1>
+
+  <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Les ingrédients</h3>
+                </div>
+                <ul class="list-group">
+                    
+                                        <?php foreach ($pizza->getIngredients() as $ingredient) : 
+    
+    echo "<span class=\"list-group-item\">" . $ingredient->getNom() . "</span>";
+ endforeach;
+?>
+                </ul>
+            </div>
+  <?php  endforeach; ?> 
+</div>
+<<<<<<< HEAD
+</div>
+
+=======
+ <table class="table">
+ <tr>
+     <th>Id</th>
+     <th>Nom</th>
+     <th>Url</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php $publicDir = getcwd() . './img/img_pizzas/'; foreach ($listepizza_page as $pizza) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($pizza->getId()); ?></td>
+     <td><?php echo $this->escapeHtml($pizza->getNom());?></td>
+     <td><img src="/img/img_pizzas/<?php echo $this->escapeHtml($pizza->getUrl_img()); ?>" alt="<?php echo $this->escapeHtml($pizza->getNom());?>" width="250"></td>
+ </tr>
+ <?php endforeach; ?>
+ </table>
+>>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
+=======
+</div>
+>>>>>>> dec132ddab9c241c7a4cf0bab8a09f478f4ed0df

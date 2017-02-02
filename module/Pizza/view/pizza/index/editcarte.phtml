@@ -1,0 +1,31 @@
+<h1>Ajouter une pizza</h1>
+<?php
+$form = $this->form;
+$form->prepare();
+$form->setAttribute('action', $this->url());
+
+if ($this->nom) :
+    ?>
+    <div>
+        <p>Nom de la pizza : <?php echo $this->nom; ?></p>
+    </div>
+    <?php
+endif;
+
+echo $this->form()->openTag($form);
+echo $this->formLabel($form->get('nom'));
+echo $this->formInput($form->get('nom'));
+echo $this->formElementErrors($form->get('nom'));
+echo $this->formLabel($form->get('base'));
+echo $this->formSelect($form->get('base'));
+echo $this->formElementErrors($form->get('base'));
+echo $this->formMultiCheckbox($form->get('ingredients'));
+echo $this->formRow($form->get('fileupload'));
+echo $this->formLabel($form->get('pizofday'));
+echo $this->formCheckbox($form->get('pizofday'));
+echo $this->formLabel($form->get('pizza_au_menu'));
+echo $this->formCheckbox($form->get('pizza_au_menu'));
+echo $this->formLabel($form->get('prix'));
+echo $this->formInput($form->get('prix'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
