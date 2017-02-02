@@ -469,13 +469,4 @@ return array(
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'Zend\\I18n\\Translator\\Resources' => $vendorDir . '/zendframework/zend-i18n-resources/src/Resources.php',
     'ZfcAdmin\\Module' => $vendorDir . '/zf-commons/zfc-admin/Module.php',
-<<<<<<< HEAD
-=======
-    'ZfcBase\\Module' => $vendorDir . '/zf-commons/zfc-base/Module.php',
-    'ZfcUserDoctrineORM\\Entity\\User' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Entity/User.php',
-    'ZfcUserDoctrineORM\\Mapper\\User' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Mapper/User.php',
-    'ZfcUserDoctrineORM\\Module' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/Module.php',
-    'ZfcUserDoctrineORM\\Options\\ModuleOptions' => $vendorDir . '/zf-commons/zfc-user-doctrine-orm/src/ZfcUserDoctrineORM/Options/ModuleOptions.php',
-    'ZfcUser\\Module' => $vendorDir . '/zf-commons/zfc-user/Module.php',
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
 );

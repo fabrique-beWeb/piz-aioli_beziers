@@ -6,12 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
-=======
-    'ZfcUserDoctrineORM' => array($vendorDir . '/zf-commons/zfc-user-doctrine-orm/src'),
-    'ZfcUser' => array($vendorDir . '/zf-commons/zfc-user/src'),
-    'ZfcBase' => array($vendorDir . '/zf-commons/zfc-base/src'),
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
     'ZfcAdmin' => array($vendorDir . '/zf-commons/zfc-admin/src'),
     'ZendXml\\' => array($vendorDir . '/zendframework/zendxml/library'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),

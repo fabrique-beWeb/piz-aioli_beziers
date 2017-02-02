@@ -5428,82 +5428,6 @@
         ]
     },
     {
-<<<<<<< HEAD
-=======
-        "name": "doctrine/dbal",
-        "version": "v2.5.9",
-        "version_normalized": "2.5.9.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/dbal.git",
-            "reference": "0d2f8187d4b4c7b72d8e2acba359e25c36feaf5e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/dbal/zipball/0d2f8187d4b4c7b72d8e2acba359e25c36feaf5e",
-            "reference": "0d2f8187d4b4c7b72d8e2acba359e25c36feaf5e",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/common": ">=2.4,<2.8-dev",
-            "php": ">=5.3.2"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "4.*",
-            "symfony/console": "2.*||^3.0"
-        },
-        "suggest": {
-            "symfony/console": "For helpful console commands such as SQL execution and import of files."
-        },
-        "time": "2017-01-19 13:27:33",
-        "bin": [
-            "bin/doctrine-dbal"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.5.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\DBAL\\": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Benjamin Eberlei",
-                "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
-            },
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com"
-            }
-        ],
-        "description": "Database Abstraction Layer",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "database",
-            "dbal",
-            "persistence",
-            "queryobject"
-        ]
-    },
-    {
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
         "name": "phpunit/php-code-coverage",
         "version": "4.0.5",
         "version_normalized": "4.0.5.0",
@@ -5705,7 +5629,6 @@
         ]
     },
     {
-<<<<<<< HEAD
         "name": "doctrine/dbal",
         "version": "v2.5.10",
         "version_normalized": "2.5.10.0",
@@ -5739,114 +5662,11 @@
         "extra": {
             "branch-alias": {
                 "dev-master": "2.5.x-dev"
-=======
-        "name": "zf-commons/zfc-base",
-        "version": "v0.1.2",
-        "version_normalized": "0.1.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ZF-Commons/ZfcBase.git",
-            "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ZF-Commons/ZfcBase/zipball/fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
-            "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3",
-            "zendframework/zend-db": "~2.1",
-            "zendframework/zend-eventmanager": "~2.1",
-            "zendframework/zend-loader": "~2.1",
-            "zendframework/zend-modulemanager": "~2.1",
-            "zendframework/zend-mvc": "~2.1",
-            "zendframework/zend-servicemanager": "~2.1",
-            "zendframework/zend-stdlib": "~2.1"
-        },
-        "time": "2013-05-02 12:33:49",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "ZfcBase": "src/"
-            },
-            "classmap": [
-                "./Module.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "authors": [
-            {
-                "name": "Kyle Spraggs",
-                "email": "theman@spiffyjr.me",
-                "homepage": "http://www.spiffyjr.me/"
-            },
-            {
-                "name": "Evan Coury",
-                "email": "me@evancoury.com",
-                "homepage": "http://blog.evan.pro/"
-            }
-        ],
-        "description": "A set of genetic (abstract) classes which are commonly used across multiple modules.",
-        "homepage": "https://github.com/ZF-Commons/ZfcBase",
-        "keywords": [
-            "zf2"
-        ]
-    },
-    {
-        "name": "zf-commons/zfc-user",
-        "version": "1.4.4",
-        "version_normalized": "1.4.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ZF-Commons/ZfcUser.git",
-            "reference": "f3d5fababf2d59f840527e62c4756fa81e346651"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ZF-Commons/ZfcUser/zipball/f3d5fababf2d59f840527e62c4756fa81e346651",
-            "reference": "f3d5fababf2d59f840527e62c4756fa81e346651",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.3.3|~7.0",
-            "zendframework/zend-authentication": "~2.1",
-            "zendframework/zend-crypt": "~2.1",
-            "zendframework/zend-form": "~2.1",
-            "zendframework/zend-http": "~2.1",
-            "zendframework/zend-inputfilter": "~2.1",
-            "zendframework/zend-loader": "~2.1",
-            "zendframework/zend-modulemanager": "~2.1",
-            "zendframework/zend-mvc": "~2.1",
-            "zendframework/zend-servicemanager": "~2.1",
-            "zendframework/zend-session": "~2.1",
-            "zendframework/zend-stdlib": "~2.1",
-            "zendframework/zend-validator": "~2.1",
-            "zendframework/zend-view": "~2.1",
-            "zf-commons/zfc-base": "0.*"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "1.4.*",
-            "phpunit/phpunit": ">=3.7,<4",
-            "squizlabs/php_codesniffer": "1.4.*",
-            "zendframework/zend-captcha": "~2.1"
-        },
-        "suggest": {
-            "zendframework/zend-captcha": "Zend\\Captcha if you want to use the captcha component"
-        },
-        "time": "2016-05-07 11:21:34",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "0.1.x-dev"
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-0": {
-<<<<<<< HEAD
                 "Doctrine\\DBAL\\": "lib/"
             }
         },
@@ -5879,87 +5699,6 @@
             "dbal",
             "persistence",
             "queryobject"
-=======
-                "ZfcUser": "src/"
-            },
-            "classmap": [
-                "./Module.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Kyle Spraggs",
-                "email": "theman@spiffyjr.me",
-                "homepage": "http://www.spiffyjr.me/"
-            },
-            {
-                "name": "Evan Coury",
-                "email": "me@evancoury.com",
-                "homepage": "http://blog.evan.pro/"
-            }
-        ],
-        "description": "A generic user registration and authentication module for ZF2. Supports Zend\\Db and Doctrine2.",
-        "homepage": "https://github.com/ZF-Commons/ZfcUser",
-        "keywords": [
-            "zf2"
-        ]
-    },
-    {
-        "name": "zf-commons/zfc-user-doctrine-orm",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ZF-Commons/ZfcUserDoctrineORM.git",
-            "reference": "9e8955c034240ad965740dab1c4947f6de4c79f8"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ZF-Commons/ZfcUserDoctrineORM/zipball/9e8955c034240ad965740dab1c4947f6de4c79f8",
-            "reference": "9e8955c034240ad965740dab1c4947f6de4c79f8",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/doctrine-orm-module": "~1.0",
-            "php": ">=5.3.3",
-            "zf-commons/zfc-user": "*"
-        },
-        "time": "2016-07-30 13:59:10",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "ZfcUserDoctrineORM": "src/"
-            },
-            "classmap": [
-                "./"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Kyle Spraggs",
-                "email": "theman@spiffyjr.me",
-                "homepage": "http://www.spiffyjr.me/"
-            },
-            {
-                "name": "Evan Coury",
-                "email": "me@evancoury.com",
-                "homepage": "http://blog.evan.pro/"
-            }
-        ],
-        "description": "Doctrine2 ORM storage adapter for ZfcUser.",
-        "homepage": "https://github.com/ZF-Commons/ZfcUserDoctrineORM",
-        "keywords": [
-            "zf2"
->>>>>>> 7118e2805159361516865ab3c0543bbb283daa5b
         ]
     },
     {
