@@ -44,9 +44,12 @@ function mycart() {
         url: "/listcart",
         dataType: 'json',
   complete : function(listcart){
-listcart=listcart.responseJSON.listcart;
-    $('#listcart').html("");
-$('#listcart').append(listcart);
+$('#listcart').html("");
+listcart=listcart.responseJSON;
+for(var i= 0; i < listcart.length; i++)
+{
+    $('#listcart').append("<p>" + listcart[i] + "</p>");
+}
 
 }
     });

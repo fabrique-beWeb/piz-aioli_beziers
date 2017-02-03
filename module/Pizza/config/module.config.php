@@ -180,6 +180,7 @@ return array(
             'error/index' => __DIR__ . '/../view/error/index.phtml',
             'pizza/index/pizofday' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
             'pizza/ajax/index' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
+            
             'pizza/index/cartepizzas' => __DIR__ . '/../view/pizza/index/pizza_au_menu.phtml',
             'pizza/index/disconnect' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
             'pizza/index/localisation' => __DIR__ . '/../view/pizza/index/localisation.phtml',

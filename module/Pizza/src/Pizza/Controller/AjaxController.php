@@ -66,11 +66,15 @@ return $listcart;
 
  }
  else {
-     return new JsonModel(array(
-                'listcart' => $_SESSION['panier']['pizza'],
-                'success' => true,
-            ));
-     return $listcart;
+
+     foreach($_SESSION['panier']['pizza'] as $pizza){
+         $pizzaencours = $this->service->getRepository('Pizza\Entity\TbPizzaPatron')->find($pizza);
+         $nom=$pizzaencours->getNom();
+         $prix=$pizzaencours->getPrix();
+         $listepizzas[]= [$nom]; 
+     }
+     return new JsonModel($listepizzas);
+
  }
 
     }
