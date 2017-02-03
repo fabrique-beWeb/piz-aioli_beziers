@@ -86,7 +86,17 @@ return array(
                 ),
                 'may_terminate' => true,
                 'child_routes' => array(
-                    'editcarte' => array(
+                    'adminpizza' => array(
+                        'type' => 'literal',
+                        'options' => array(
+                            'route' => '/adminpizza',
+                            'defaults' => array(
+                                'controller' => 'Pizza\Controller\Editcarte',
+                                'action' => 'admincartepizzas',
+                            ),
+                        ),
+                    ),
+                    'addpizza' => array(
                         'type' => 'literal',
                         'options' => array(
                             'route' => '/editcarte',
@@ -106,16 +116,33 @@ return array(
                             ),
                         ),
                     ),
+                    'deletepizza' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/deletepizza[/:id]',
+                            'defaults' => array(
+                                'controller' => 'Pizza\Controller\Ajax',
+                                'action' => 'deletepizza',
+                            ),
+                        ),
+                    ),
+                    'editlocalisation' => array(
+                        'type' => 'literal',
+                        'options' => array(
+                            'route' => '/editlocalisation',
+                            'defaults' => array(
+                                'controller' => 'Pizza\Controller\Admincommandes',
+                                'action' => 'editlocalisation',
+                            ),
+                        ),
+                    ),
                 ),
             ),
             //controller Membre
             'userdetail' => array(
-                'type' => 'segment',
+                'type' => 'literal',
                 'options' => array(
-                    'route' => '/detail[/:id]',
-                    'constraints' => array(
-                        'id' => '[0-9]+',
-                    ),
+                    'route' => '/detail',
                     'defaults' => array(
                         'controller' => 'Pizza/Controller/Membre',
                         'action' => 'detail',
@@ -165,6 +192,7 @@ return array(
             'Pizza\Controller\Membre' => 'Pizza\Factory\MembreControllerFactory',
             'Pizza\Controller\Log' => 'Pizza\Factory\LogControllerFactory',
             'Pizza\Controller\Ajax' => 'Pizza\Factory\AjaxControllerFactory',
+            'Pizza\Controller\Admincommandes' => 'Pizza\Factory\AdmincommandesControllerFactory',
         ),
     ),
     'view_manager' => array(
@@ -180,7 +208,6 @@ return array(
             'error/index' => __DIR__ . '/../view/error/index.phtml',
             'pizza/index/pizofday' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
             'pizza/ajax/index' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
-            
             'pizza/index/cartepizzas' => __DIR__ . '/../view/pizza/index/pizza_au_menu.phtml',
             'pizza/index/disconnect' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
             'pizza/index/localisation' => __DIR__ . '/../view/pizza/index/localisation.phtml',
@@ -188,6 +215,8 @@ return array(
             'pizza/log/adduser' => __DIR__ . '/../view/pizza/index/register.phtml',
             'pizza/membre/detail' => __DIR__ . '/../view/pizza/index/detail.phtml',
             'pizza/editcarte/index' => __DIR__ . '/../view/pizza/index/editcarte.phtml',
+            'pizza/editcarte/index' => __DIR__ . '/../view/pizza/index/editcarte.phtml',
+            'pizza/admincommandes/editlocalisation' => __DIR__ . '/../view/pizza/index/editlocalisation.phtml',
             'pizza/gestioncommandes/index' => __DIR__ . '/../view/pizza/index/gestioncommandes.phtml',
         ),
 //        'template_path_stack' => array(

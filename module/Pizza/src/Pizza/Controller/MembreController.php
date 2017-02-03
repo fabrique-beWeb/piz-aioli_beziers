@@ -16,8 +16,7 @@ class MembreController extends AbstractActionController {
     }
 
     public function detailAction() {
-        
-        $id = (int) $this->params()->fromRoute('id', 0);
+         $id = $_SESSION['userId'];
         return new ViewModel(
                 array(
             'detail' => $this->service->getRepository('Pizza\Entity\TbUsers')->find($id),

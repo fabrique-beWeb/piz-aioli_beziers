@@ -23,20 +23,20 @@ class AjaxController extends AbstractActionController {
 
         if (!isset($_SESSION['panier']['pizza'])) {
             $_SESSION['panier']['pizza'] = array();
-            $_SESSION['panier']['pizza'][]=$id;
+            $_SESSION['panier']['pizza'][] = $id;
             return new JsonModel(array(
                 'cartnb' => count($_SESSION['panier']['pizza']),
                 'success' => true,
             ));
         } else {
-            $_SESSION['panier']['pizza'][]=$id;
+            $_SESSION['panier']['pizza'][] = $id;
             return new JsonModel(array(
                 'cartnb' => count($_SESSION['panier']['pizza']),
                 'success' => true,
             ));
         }
     }
-
+    
     public function emptycartAction() {
 
         if (isset($_SESSION['panier']['pizza'])) {
@@ -56,27 +56,36 @@ class AjaxController extends AbstractActionController {
             return $emptycart;
         }
     }
-    
+
+    public function deletepizzaAction() {
+        $id = (int) $this->params()->fromRoute('id', 0);
+        $pizzatodelete = $this->service->getRepository('Pizza\Entity\TbPizzaPatron')->find($id);
+        $this->service->remove($pizzatodelete);
+        $this->service->flush();
+
+        return new JsonModel(array(
+            'cartnb' => $id,
+            'success' => true,
+        ));
+    }
+
     public function listcartAction() {
-if (!isset($_SESSION['panier']['pizza'])) { return new JsonModel(array(
+        if (!isset($_SESSION['panier']['pizza'])) {
+            return new JsonModel(array(
                 'listcart' => "vide",
                 'success' => true,
             ));
-return $listcart;
+            return $listcart;
+        } else {
 
- }
- else {
-
-     foreach($_SESSION['panier']['pizza'] as $pizza){
-         $pizzaencours = $this->service->getRepository('Pizza\Entity\TbPizzaPatron')->find($pizza);
-         $nom=$pizzaencours->getNom();
-         $prix=$pizzaencours->getPrix();
-         $listepizzas[]= [$nom]; 
-     }
-     return new JsonModel($listepizzas);
-
- }
-
+            foreach ($_SESSION['panier']['pizza'] as $pizza) {
+                $pizzaencours = $this->service->getRepository('Pizza\Entity\TbPizzaPatron')->find($pizza);
+                $nom = $pizzaencours->getNom();
+                $prix = $pizzaencours->getPrix();
+                $listepizzas[] = [$nom];
+            }
+            return new JsonModel($listepizzas);
+        }
     }
 
 }

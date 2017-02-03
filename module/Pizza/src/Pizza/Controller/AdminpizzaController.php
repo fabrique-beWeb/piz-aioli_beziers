@@ -29,13 +29,14 @@ public function addAction() {
                 $ingredients[] = $this->service->getRepository('\Pizza\Entity\TbIngredients')->find($ingredientId);
             }
             $base = $this->service->getRepository('\Pizza\Entity\TbBases')->find($dataForm['base']);
+
             $newpizza->setIngredients($ingredients);
             $newpizza->setBase($base);
             $newpizza->setNom($dataForm['nom']);
 
             $this->service->persist($newpizza);
             $this->service->flush();
-            return $this->redirect()->toRoute('cartepizzas');
+            
         }
         $viewData['form'] = $form;
         return new ViewModel($viewData);

@@ -16,7 +16,12 @@ class EditcarteController extends AbstractActionController {
     public function __construct(ControllerServiceInterface $service) {
         $this->service = $service->getService();
     }
+   public function admincartepizzasAction() {
 
+        return new ViewModel(array(
+            'listepizza_page' => $this->service->getRepository('Pizza\Entity\TbPizzaPatron')->cartepizzas(),
+        ));
+    }
     public function indexAction() {
         $viewData = array();
 
@@ -32,6 +37,17 @@ class EditcarteController extends AbstractActionController {
 
             foreach ($dataForm['ingredients'] as $ingredientId) {
                 $ingredients[] = $this->service->getRepository('\Pizza\Entity\TbIngredients')->find($ingredientId);
+            }
+            
+            if ($dataForm['pizofday']==1) {
+                $pizofday = $this->service->getRepository('\Pizza\Entity\TbPizzaPatron')->pizofday();
+                
+                foreach ( $pizofday as $pizza ) {
+                    $pizza->setPizofday("0");
+                    $this->service->persist($pizza);
+                    $this->service->flush();
+                }
+                
             }
             
             $base = $this->service->getRepository('\Pizza\Entity\TbBases')->find($dataForm['base']);
@@ -65,10 +81,8 @@ class EditcarteController extends AbstractActionController {
                     $newpizza->setUrl_img($tmp_name."_".$dataForm['fileupload']['name']);
                 }
             }
-            
-            
             $this->service->persist($newpizza);
-            $this->service->flush();
+                    $this->service->flush();
         }
         $viewData['form'] = $form;
         return new ViewModel($viewData);

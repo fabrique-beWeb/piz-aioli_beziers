@@ -2,7 +2,7 @@
 
 namespace Pizza\Factory;
  
-use Pizza\Controller\AdminpizzaController;
+use Pizza\Controller\AdmincommandesController;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
  

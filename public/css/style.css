@@ -42,7 +42,7 @@
     left: 50%;
     width: 50%;
     max-width: 500px;
-    max-height: 250px;
+    min-height: 200px;
     height: auto;
     z-index: 2000;
     display: none;

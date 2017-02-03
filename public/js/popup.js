@@ -78,3 +78,15 @@ $('.cart').append(cartnb);
 
     $('#mycart').fadeOut();
     }
+
+function deletepizza(id) {
+
+    $.ajax({
+        url: "/backend/deletepizza/" + id,
+        dataType: 'json',
+        complete : function(){
+location.reload();
+
+}
+    });
+    }
