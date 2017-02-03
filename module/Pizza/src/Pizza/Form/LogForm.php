@@ -46,7 +46,15 @@
                 'name' => 'submit',        // Nom du champ
                 'type' => 'Submit',        // Type du champ
                 'attributes' => array(     // On va définir quelques attributs
-                    'value' => 'Ajouter',  // comme la valeur
+                    'value' => 'Se connecter',  // comme la valeur
+                    'id' => 'submit',      // et l'id
+                ),
+            ));
+                        $this->add(array(
+                'name' => 'submit2',        // Nom du champ
+                'type' => 'Submit',        // Type du champ
+                'attributes' => array(     // On va définir quelques attributs
+                    'value' => 'Créer un compte',  // comme la valeur
                     'id' => 'submit',      // et l'id
                 ),
             ));

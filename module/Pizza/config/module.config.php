@@ -145,6 +145,16 @@ return array(
                     ),
                 ),
             ),
+            'register' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route' => '/register',
+                    'defaults' => array(
+                        'controller' => 'Pizza\Controller\Log',
+                        'action' => 'adduser',
+                    ),
+                ),
+            ),
         ),
     ),
     'controllers' => array(
@@ -174,6 +184,7 @@ return array(
             'pizza/index/disconnect' => __DIR__ . '/../view/pizza/index/pizofday.phtml',
             'pizza/index/localisation' => __DIR__ . '/../view/pizza/index/localisation.phtml',
             'pizza/log/connect' => __DIR__ . '/../view/pizza/index/connect.phtml',
+            'pizza/log/adduser' => __DIR__ . '/../view/pizza/index/register.phtml',
             'pizza/membre/detail' => __DIR__ . '/../view/pizza/index/detail.phtml',
             'pizza/editcarte/index' => __DIR__ . '/../view/pizza/index/editcarte.phtml',
             'pizza/gestioncommandes/index' => __DIR__ . '/../view/pizza/index/gestioncommandes.phtml',

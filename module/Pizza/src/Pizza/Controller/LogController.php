@@ -16,7 +16,7 @@ class LogController extends AbstractActionController {
     }
 
     public function connectAction() {
-if ($this->getRequest()->isPost()) {
+        if ($this->getRequest()->isPost()) {
             $dataForm = $this->getRequest()->getPost();
 
             $request = $this->service->getRepository('Pizza\Entity\TbUsers')->findOneBy(array('email' => $dataForm['email'], 'password' => $dataForm['password']));
@@ -24,8 +24,7 @@ if ($this->getRequest()->isPost()) {
                 $_SESSION['userId'] = $request->getUser_id();
                 $_SESSION['email'] = $request->getEmail();
                 $_SESSION['role'] = $request->getRole();
-               return $this->redirect()->toRoute('index'); 
-                
+                return $this->redirect()->toRoute('index');
             }
         }
 
@@ -33,19 +32,26 @@ if ($this->getRequest()->isPost()) {
         $viewData['form'] = $form;
         return new ViewModel($viewData);
     }
-    
-        public function adduserAction() {
-if ($this->getRequest()->isPost()) {
+
+    public function adduserAction() {
+        if ($this->getRequest()->isPost()) {
+            echo"toto";
+            $newuser = new \Pizza\Entity\TbUsers();
             $dataForm = $this->getRequest()->getPost();
 
-            $request = $this->service->getRepository('Pizza\Entity\TbUsers')->findOneBy(array('email' => $dataForm['email'], 'password' => $dataForm['password']));
-            if ($request) {
+            $newuser->setEmail($dataForm['email']);
+            $newuser->setPassword($dataForm['password']);
+            $newuser->setRole("user");
+            $this->service->persist($newuser);
+            $this->service->flush();
+
+            $request = $this->service->getRepository('Pizza\Entity\TbUsers')->findOneBy(array('email' => $dataForm['email']));
+print_r($request);
                 $_SESSION['userId'] = $request->getUser_id();
                 $_SESSION['email'] = $request->getEmail();
                 $_SESSION['role'] = $request->getRole();
-               return $this->redirect()->toRoute('index'); 
-                
-            }
+                return $this->redirect()->toRoute('index');
+ 
         }
 
         $form = new LogForm($this->service);

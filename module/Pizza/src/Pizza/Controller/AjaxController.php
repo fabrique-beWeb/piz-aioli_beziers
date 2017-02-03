@@ -23,21 +23,17 @@ class AjaxController extends AbstractActionController {
 
         if (!isset($_SESSION['panier']['pizza'])) {
             $_SESSION['panier']['pizza'] = array();
-            array_push($_SESSION['panier']['pizza'], $id);
+            $_SESSION['panier']['pizza'][]=$id;
             return new JsonModel(array(
                 'cartnb' => count($_SESSION['panier']['pizza']),
                 'success' => true,
             ));
-
-            return $result;
         } else {
-            array_push($_SESSION['panier']['pizza'], $id);
+            $_SESSION['panier']['pizza'][]=$id;
             return new JsonModel(array(
                 'cartnb' => count($_SESSION['panier']['pizza']),
                 'success' => true,
             ));
-
-            return $result;
         }
     }
 
@@ -71,7 +67,7 @@ return $listcart;
  }
  else {
      return new JsonModel(array(
-                'listcart' => "plein",
+                'listcart' => $_SESSION['panier']['pizza'],
                 'success' => true,
             ));
      return $listcart;

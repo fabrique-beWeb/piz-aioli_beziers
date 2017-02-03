@@ -2,9 +2,8 @@
 <?php
   $form = $this->form;
       $form->prepare();
-    $form->setAttribute('action', $this->url('connect'));
+    $form->setAttribute('action', $this->url('register'));
     echo $this->form()->openTag($form);
-    echo $this->formHidden($form->get('id_membre'));
 ?>
 <table>
 
@@ -15,7 +14,7 @@
     <tfoot>
         <tr>
             <td colspan="2">
-<?php echo $this->formSubmit($form->get('submit')); ?>
+<?php echo $this->formSubmit($form->get('submit2')); ?>
             </td>
         </tr>
     </tfoot>
@@ -50,6 +49,4 @@
 </table>
 <?php
 echo $this->form()->closeTag();
-?> 
-
-<a class="btn btn-success popup-button" href="/register" role="button">S'inscrire</a>
+?>

@@ -1,19 +1,24 @@
 function popup(id) {
 
     $('#popup').fadeIn();
-    var close = $('.close');
-    close.click(function (event)
+   
+   $('#lienadd').attr('onclick', 'addtocart(' + id + ');');
+//    $('#lienadd').click(function () {
+//        addtocart(id);
+//    });
+}
+
+$().ready(function() {
+    $('.close').click(function (event)
     {
         $('#popup').fadeOut();
     });
 
-    $('#lienadd').click(function () {
-        addtocart(id);
-    });
-
-}
+   
+})
 
 function addtocart(id) {
+
     $.ajax({
         url: "/addtocart/" + id,
         dataType: 'json',
