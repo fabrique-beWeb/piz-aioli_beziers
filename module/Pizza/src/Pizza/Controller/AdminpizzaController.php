@@ -35,6 +35,7 @@ public function addAction() {
 
             $this->service->persist($newpizza);
             $this->service->flush();
+            return $this->redirect()->toRoute('cartepizzas');
         }
         $viewData['form'] = $form;
         return new ViewModel($viewData);

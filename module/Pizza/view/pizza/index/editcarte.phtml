@@ -4,28 +4,58 @@ $form = $this->form;
 $form->prepare();
 $form->setAttribute('action', $this->url());
 
-if ($this->nom) :
-    ?>
-    <div>
-        <p>Nom de la pizza : <?php echo $this->nom; ?></p>
+echo $this->form()->openTag($form);  ?>
+<form class="form-horizontal">
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <?php echo $this->formLabel($form->get('nom')); ?>
+            <?php echo $this->formInput($form->get('nom')); ?>
+        </div>
     </div>
-    <?php
-endif;
 
-echo $this->form()->openTag($form);
-echo $this->formLabel($form->get('nom'));
-echo $this->formInput($form->get('nom'));
-echo $this->formElementErrors($form->get('nom'));
-echo $this->formLabel($form->get('base'));
-echo $this->formSelect($form->get('base'));
-echo $this->formElementErrors($form->get('base'));
-echo $this->formMultiCheckbox($form->get('ingredients'));
-echo $this->formRow($form->get('fileupload'));
-echo $this->formLabel($form->get('pizofday'));
-echo $this->formCheckbox($form->get('pizofday'));
-echo $this->formLabel($form->get('pizza_au_menu'));
-echo $this->formCheckbox($form->get('pizza_au_menu'));
-echo $this->formLabel($form->get('prix'));
-echo $this->formInput($form->get('prix'));
-echo $this->formSubmit($form->get('submit'));
-echo $this->form()->closeTag();
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <?php echo $this->formLabel($form->get('base')); ?>
+            <?php echo $this->formSelect($form->get('base')); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+                <?php echo $this->formRow($form->get('fileupload')); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+                <?php echo $this->formMultiCheckbox($form->get('ingredients')); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <div class="checkbox">
+                <?php echo $this->formLabel($form->get('pizofday')); ?>
+                <?php echo $this->formCheckbox($form->get('pizofday')); ?>
+            </div>
+        </div>
+    </div>
+        <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <div class="checkbox">
+                <?php echo $this->formLabel($form->get('pizza_au_menu')); ?>
+<?php echo $this->formCheckbox($form->get('pizza_au_menu')); ?>
+            </div>
+        </div>
+    </div>
+        <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <?php echo $this->formLabel($form->get('prix')); ?>
+                        <?php echo $this->formInput($form->get('prix')); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <?php echo $this->formSubmit($form->get('submit')); ?>
+        </div>
+    </div>
+</form>
+
+<?php echo $this->form()->closeTag(); ?>
