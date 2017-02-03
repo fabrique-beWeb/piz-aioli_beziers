@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Ven 03 Février 2017 à 11:49
+-- Généré le :  Ven 03 Février 2017 à 18:08
 -- Version du serveur :  5.7.17-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.13-0ubuntu0.16.04.1
 
@@ -39,7 +39,7 @@ CREATE TABLE `tbInfos_Societe` (
 --
 
 INSERT INTO `tbInfos_Societe` (`id`, `adresse`, `numero_tel`, `email`, `map`) VALUES
-(1, 'san francisco', '656654654665', 'dscsds@csddsc.com', '');
+(1, '12 boulevard jean moulin 34500 béziers', '656654654665', 'dscsds@csddsc.com', '');
 
 -- --------------------------------------------------------
 
@@ -57,8 +57,6 @@ CREATE TABLE `tbpizzapatron_tbingredients` (
 --
 
 INSERT INTO `tbpizzapatron_tbingredients` (`tbpizzapatron_id`, `tbingredients_id`) VALUES
-(44, 2),
-(45, 2),
 (46, 1),
 (48, 2),
 (49, 1),
@@ -75,7 +73,22 @@ INSERT INTO `tbpizzapatron_tbingredients` (`tbpizzapatron_id`, `tbingredients_id
 (52, 9),
 (52, 10),
 (53, 2),
-(53, 4);
+(53, 4),
+(54, 2),
+(54, 4),
+(54, 5),
+(57, 4),
+(61, 2),
+(61, 4),
+(63, 1),
+(63, 2),
+(63, 4),
+(63, 5),
+(64, 1),
+(64, 2),
+(64, 3),
+(64, 4),
+(64, 8);
 
 -- --------------------------------------------------------
 
@@ -145,16 +158,19 @@ CREATE TABLE `tb_pizza_patron` (
 --
 
 INSERT INTO `tb_pizza_patron` (`id`, `nom`, `pizofday`, `pizza_au_menu`, `prix`, `url_img`, `base`) VALUES
-(44, 'Pizza bagnat', 0, 1, 12, 'phpsoD535_bagnat.jpg', 2),
-(45, 'Pizza banane', 0, 1, 12, 'php8GlCFf_banane.jpg', 1),
 (46, 'La chèvre miel', 0, 1, 17, 'phpyWCAO1_chevremiel.jpg', 1),
 (47, 'La chorizo', 0, 1, 23, 'phpiF8hR5_chorizo.jpg', 1),
 (48, 'La dyarée', 0, 1, 14, 'phpQTjGDL_dya-ree.jpg', 1),
 (49, 'Fiesta', 0, 1, 23, 'phpsJdR7H_fiesta.jpg', 2),
 (50, 'Gastro', 0, 1, 14, 'php0UASel_gastro.jpg', 1),
 (51, 'Hawaienne', 0, 1, 45, 'phpzzJOR1_hawaienne.jpg', 1),
-(52, 'Pizza canibale', 1, 1, 32, 'phpmZRDZh_royal.jpg', 1),
-(53, 'pizza blanche pour tester', 0, 1, 45, 'phpIpaRNT_comment-se-suicider.jpg', 2);
+(52, 'Pizza canibale', 0, 1, 32, 'phpmZRDZh_royal.jpg', 1),
+(53, 'pizza blanche pour tester', 0, 1, 45, 'phpIpaRNT_comment-se-suicider.jpg', 2),
+(54, 'Pizza du vendredi', 0, 1, 45, 'phpWf2Pnm_doctorwho_s05_e00_21_tardis_x-large-590x330.jpg', 1),
+(57, 'edsqd', 0, 1, 11, 'phpkyeo4t_dya-ree.jpg', 2),
+(61, 'zzzzzzzzzz', 0, 1, 11, 'phpUCZdx4_commandes_unix.png', 1),
+(63, 'Pizza vedette', 1, 1, 45, 'phpiY1iZG_hawaienne.jpg', 1),
+(64, 'Pizza beuark', 0, 1, 12, 'phpFsWfZw_gastro.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -247,7 +263,7 @@ ALTER TABLE `tb_ingredients`
 -- AUTO_INCREMENT pour la table `tb_pizza_patron`
 --
 ALTER TABLE `tb_pizza_patron`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 --
 -- AUTO_INCREMENT pour la table `tb_users`
 --
