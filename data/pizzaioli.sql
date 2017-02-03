@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 02 Février 2017 à 16:19
+-- Généré le :  Ven 03 Février 2017 à 11:49
 -- Version du serveur :  5.7.17-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.13-0ubuntu0.16.04.1
 
@@ -175,7 +175,10 @@ CREATE TABLE `tb_users` (
 
 INSERT INTO `tb_users` (`user_id`, `email`, `role`, `password`) VALUES
 (1, 'admin@pizzaioli.fr', 'admin', '123456'),
-(2, 'user@pizzaioli.fr', 'user', '123456');
+(2, 'user@pizzaioli.fr', 'user', '123456'),
+(3, 'toto@pizzaioli.fr', 'user', '123456'),
+(4, 'sdds', 'user', '123456'),
+(5, 'zdsfdsf', 'user', '123456');
 
 --
 -- Index pour les tables exportées
@@ -234,7 +237,7 @@ ALTER TABLE `tbInfos_Societe`
 -- AUTO_INCREMENT pour la table `tb_bases`
 --
 ALTER TABLE `tb_bases`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `tb_ingredients`
 --
@@ -249,7 +252,7 @@ ALTER TABLE `tb_pizza_patron`
 -- AUTO_INCREMENT pour la table `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Contraintes pour les tables exportées
 --
